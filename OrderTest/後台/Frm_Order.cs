@@ -547,7 +547,8 @@ namespace Hotel
 
         private void btnaddOrder_Click(object sender, EventArgs e)
         {
-           
+           //新增測試
+
             //取得最大ID
             string maxOID = dbcontext.Orders.Max(oid => oid.OrderID);
             string maxODID = dbcontext.OrderDetails.Max(odid => odid.OrderDetailID);
