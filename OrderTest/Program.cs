@@ -1,5 +1,6 @@
 ﻿using Hotel;
 using HotelManager;
+using OrderTest.使用者;
 using OrderTest.後台;
 using prjMidterm1;
 using System;
@@ -21,7 +22,7 @@ namespace OrderTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 首頁());
+            //Application.Run(new 首頁());
             //Application.Run(new Frm_Management());//後台管理
             //Application.Run(new Frm_Industry());//業者
             //Application.Run(new Frm_Facility());//設備
@@ -32,6 +33,10 @@ namespace OrderTest
             //Application.Run(new Frm_MemberModify());//會員管理
             //Application.Run(new Frm_Activity());//活動
             //Application.Run(new Frm_RoomPicture());//房間照片
+            Application.Run(new FrmUserSelectRoom());//下定房間
+
+
+
 
         }
     }

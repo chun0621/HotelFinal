@@ -181,6 +181,12 @@
     <Compile Include="使用者\Frm_MemberIForgetPassword.designer.cs">
       <DependentUpon>Frm_MemberIForgetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="使用者\RoomUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="使用者\RoomUserControl.Designer.cs">
+      <DependentUpon>RoomUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="後台\Frm_Comments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     <EmbeddedResource Include="使用者\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="使用者\FrmUserSelectRoom.resx">
+      <DependentUpon>FrmUserSelectRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="使用者\Frm_About.resx">
       <DependentUpon>Frm_About.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="使用者\Frm_MemberIForgetPassword.resx">
       <DependentUpon>Frm_MemberIForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\RoomUserControl.resx">
+      <DependentUpon>RoomUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="後台\Frm_Comments.resx">
       <DependentUpon>Frm_Comments.cs</DependentUpon>
