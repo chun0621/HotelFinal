@@ -359,6 +359,7 @@
       <DependentUpon>dbContext.edmx</DependentUpon>
       <LastGenOutput>dbContext.cs</LastGenOutput>
     </Content>
+    <Content Include="git測試.txt" />
     <None Include="Resources\2.jpg" />
     <None Include="Resources\2530788_add user_business man_employee_general_human_icon.png" />
     <None Include="Resources\2530821_business man_employee_general_human_member_icon.png" />
