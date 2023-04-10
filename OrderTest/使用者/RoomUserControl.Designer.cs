@@ -50,7 +50,7 @@
             // btnGood
             // 
             this.btnGood.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGood.Location = new System.Drawing.Point(234, 131);
+            this.btnGood.Location = new System.Drawing.Point(238, 23);
             this.btnGood.Name = "btnGood";
             this.btnGood.Size = new System.Drawing.Size(69, 49);
             this.btnGood.TabIndex = 2;
@@ -60,7 +60,7 @@
             // btnCollectRoom
             // 
             this.btnCollectRoom.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCollectRoom.Location = new System.Drawing.Point(309, 131);
+            this.btnCollectRoom.Location = new System.Drawing.Point(313, 23);
             this.btnCollectRoom.Name = "btnCollectRoom";
             this.btnCollectRoom.Size = new System.Drawing.Size(69, 49);
             this.btnCollectRoom.TabIndex = 3;
@@ -70,7 +70,7 @@
             // btnShare
             // 
             this.btnShare.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnShare.Location = new System.Drawing.Point(384, 131);
+            this.btnShare.Location = new System.Drawing.Point(388, 23);
             this.btnShare.Name = "btnShare";
             this.btnShare.Size = new System.Drawing.Size(69, 49);
             this.btnShare.TabIndex = 4;
@@ -80,7 +80,7 @@
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOrder.Location = new System.Drawing.Point(234, 186);
+            this.btnOrder.Location = new System.Drawing.Point(238, 78);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(219, 49);
             this.btnOrder.TabIndex = 5;
