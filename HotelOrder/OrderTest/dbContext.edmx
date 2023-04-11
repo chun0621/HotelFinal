@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HotelOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HotelOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Activity">
           <Key>
             <PropertyRef Name="ActivityID" />
@@ -35,6 +35,14 @@
           <Property Name="FacilityName" Type="nvarchar" MaxLength="20" />
           <Property Name="FacilityImage" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="HotelFacilities">
+          <Key>
+            <PropertyRef Name="HotelFacilityID" />
+          </Key>
+          <Property Name="HotelFacilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelFacilityName" Type="nvarchar" MaxLength="20" />
+          <Property Name="HotelFacilityImage" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="HotelIndustries">
           <Key>
             <PropertyRef Name="HotelID" />
@@ -61,6 +69,14 @@
           <Property Name="MultipleFacilitiesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoomID" Type="nvarchar" MaxLength="20" />
           <Property Name="FacilityID" Type="int" />
+        </EntityType>
+        <EntityType Name="MultipleHotelFacilities">
+          <Key>
+            <PropertyRef Name="MultipleHotelFacilityID" />
+          </Key>
+          <Property Name="MultipleHotelFacilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelID" Type="int" />
+          <Property Name="HotelFacilityID" Type="int" />
         </EntityType>
         <EntityType Name="OrderDetails">
           <Key>
@@ -222,6 +238,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MultipleHotelFacilities_HotelFacilities">
+          <End Role="HotelFacilities" Type="Self.HotelFacilities" Multiplicity="0..1" />
+          <End Role="MultipleHotelFacilities" Type="Self.MultipleHotelFacilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HotelFacilities">
+              <PropertyRef Name="HotelFacilityID" />
+            </Principal>
+            <Dependent Role="MultipleHotelFacilities">
+              <PropertyRef Name="HotelFacilityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MultipleHotelFacilities_HotelIndustries">
+          <End Role="HotelIndustries" Type="Self.HotelIndustries" Multiplicity="0..1" />
+          <End Role="MultipleHotelFacilities" Type="Self.MultipleHotelFacilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HotelIndustries">
+              <PropertyRef Name="HotelID" />
+            </Principal>
+            <Dependent Role="MultipleHotelFacilities">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_OrderDetails_OrderDetailStatus">
           <End Role="OrderDetailStatus" Type="Self.OrderDetailStatus" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
@@ -370,9 +410,11 @@
           <EntitySet Name="Activity" EntityType="Self.Activity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Facilities" EntityType="Self.Facilities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelFacilities" EntityType="Self.HotelFacilities" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HotelIndustries" EntityType="Self.HotelIndustries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HotelRegionName" EntityType="Self.HotelRegionName" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MultipleFacilities" EntityType="Self.MultipleFacilities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MultipleHotelFacilities" EntityType="Self.MultipleHotelFacilities" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetailStatus" EntityType="Self.OrderDetailStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -399,6 +441,14 @@
           <AssociationSet Name="FK_MultipleFacilities_Room" Association="Self.FK_MultipleFacilities_Room">
             <End Role="Room" EntitySet="Room" />
             <End Role="MultipleFacilities" EntitySet="MultipleFacilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MultipleHotelFacilities_HotelFacilities" Association="Self.FK_MultipleHotelFacilities_HotelFacilities">
+            <End Role="HotelFacilities" EntitySet="HotelFacilities" />
+            <End Role="MultipleHotelFacilities" EntitySet="MultipleHotelFacilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MultipleHotelFacilities_HotelIndustries" Association="Self.FK_MultipleHotelFacilities_HotelIndustries">
+            <End Role="HotelIndustries" EntitySet="HotelIndustries" />
+            <End Role="MultipleHotelFacilities" EntitySet="MultipleHotelFacilities" />
           </AssociationSet>
           <AssociationSet Name="FK_OrderDetails_OrderDetailStatus" Association="Self.FK_OrderDetails_OrderDetailStatus">
             <End Role="OrderDetailStatus" EntitySet="OrderDetailStatus" />
@@ -449,7 +499,8 @@
             <End Role="RoomMember" EntitySet="RoomMember" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelOrderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -486,6 +537,15 @@
           <Property Name="FacilityImage" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="MultipleFacilities" Relationship="Self.FK_MultipleFacilities_Facilities" FromRole="Facilities" ToRole="MultipleFacilities" />
         </EntityType>
+        <EntityType Name="HotelFacility">
+          <Key>
+            <PropertyRef Name="HotelFacilityID" />
+          </Key>
+          <Property Name="HotelFacilityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelFacilityName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HotelFacilityImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="MultipleHotelFacilities" Relationship="Self.FK_MultipleHotelFacilities_HotelFacilities" FromRole="HotelFacilities" ToRole="MultipleHotelFacilities" />
+        </EntityType>
         <EntityType Name="HotelIndustry">
           <Key>
             <PropertyRef Name="HotelID" />
@@ -498,6 +558,7 @@
           <Property Name="HotelImage" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="HotelImageDiscription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HotelRegionName" Relationship="Self.FK_HotelIndustries_HotelRegionName" FromRole="HotelIndustries" ToRole="HotelRegionName" />
+          <NavigationProperty Name="MultipleHotelFacilities" Relationship="Self.FK_MultipleHotelFacilities_HotelIndustries" FromRole="HotelIndustries" ToRole="MultipleHotelFacilities" />
           <NavigationProperty Name="Rooms" Relationship="Self.FK_Room_HotelIndustries" FromRole="HotelIndustries" ToRole="Room" />
         </EntityType>
         <EntityType Name="HotelRegionName">
@@ -517,6 +578,16 @@
           <Property Name="FacilityID" Type="Int32" />
           <NavigationProperty Name="Facility" Relationship="Self.FK_MultipleFacilities_Facilities" FromRole="MultipleFacilities" ToRole="Facilities" />
           <NavigationProperty Name="Room" Relationship="Self.FK_MultipleFacilities_Room" FromRole="MultipleFacilities" ToRole="Room" />
+        </EntityType>
+        <EntityType Name="MultipleHotelFacility">
+          <Key>
+            <PropertyRef Name="MultipleHotelFacilityID" />
+          </Key>
+          <Property Name="MultipleHotelFacilityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelID" Type="Int32" />
+          <Property Name="HotelFacilityID" Type="Int32" />
+          <NavigationProperty Name="HotelFacility" Relationship="Self.FK_MultipleHotelFacilities_HotelFacilities" FromRole="MultipleHotelFacilities" ToRole="HotelFacilities" />
+          <NavigationProperty Name="HotelIndustry" Relationship="Self.FK_MultipleHotelFacilities_HotelIndustries" FromRole="MultipleHotelFacilities" ToRole="HotelIndustries" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -611,7 +682,7 @@
           <Key>
             <PropertyRef Name="RoomImagesID" />
           </Key>
-          <Property Name="RoomImagesID" Type="Int32" Nullable="false" />
+          <Property Name="RoomImagesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoomImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="RoomID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="RoomImage1" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -690,6 +761,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MultipleHotelFacilities_HotelFacilities">
+          <End Role="HotelFacilities" Type="Self.HotelFacility" Multiplicity="0..1" />
+          <End Role="MultipleHotelFacilities" Type="Self.MultipleHotelFacility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HotelFacilities">
+              <PropertyRef Name="HotelFacilityID" />
+            </Principal>
+            <Dependent Role="MultipleHotelFacilities">
+              <PropertyRef Name="HotelFacilityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HotelIndustries_HotelRegionName">
           <End Role="HotelRegionName" Type="Self.HotelRegionName" Multiplicity="0..1" />
           <End Role="HotelIndustries" Type="Self.HotelIndustry" Multiplicity="*" />
@@ -699,6 +782,18 @@
             </Principal>
             <Dependent Role="HotelIndustries">
               <PropertyRef Name="HotelRegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MultipleHotelFacilities_HotelIndustries">
+          <End Role="HotelIndustries" Type="Self.HotelIndustry" Multiplicity="0..1" />
+          <End Role="MultipleHotelFacilities" Type="Self.MultipleHotelFacility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HotelIndustries">
+              <PropertyRef Name="HotelID" />
+            </Principal>
+            <Dependent Role="MultipleHotelFacilities">
+              <PropertyRef Name="HotelID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -850,9 +945,11 @@
           <EntitySet Name="Activities" EntityType="Self.Activity" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Facilities" EntityType="Self.Facility" />
+          <EntitySet Name="HotelFacilities" EntityType="Self.HotelFacility" />
           <EntitySet Name="HotelIndustries" EntityType="Self.HotelIndustry" />
           <EntitySet Name="HotelRegionNames" EntityType="Self.HotelRegionName" />
           <EntitySet Name="MultipleFacilities" EntityType="Self.MultipleFacility" />
+          <EntitySet Name="MultipleHotelFacilities" EntityType="Self.MultipleHotelFacility" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
           <EntitySet Name="OrderDetailStatus" EntityType="Self.OrderDetailStatu" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
@@ -876,9 +973,17 @@
             <End Role="Facilities" EntitySet="Facilities" />
             <End Role="MultipleFacilities" EntitySet="MultipleFacilities" />
           </AssociationSet>
+          <AssociationSet Name="FK_MultipleHotelFacilities_HotelFacilities" Association="Self.FK_MultipleHotelFacilities_HotelFacilities">
+            <End Role="HotelFacilities" EntitySet="HotelFacilities" />
+            <End Role="MultipleHotelFacilities" EntitySet="MultipleHotelFacilities" />
+          </AssociationSet>
           <AssociationSet Name="FK_HotelIndustries_HotelRegionName" Association="Self.FK_HotelIndustries_HotelRegionName">
             <End Role="HotelRegionName" EntitySet="HotelRegionNames" />
             <End Role="HotelIndustries" EntitySet="HotelIndustries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MultipleHotelFacilities_HotelIndustries" Association="Self.FK_MultipleHotelFacilities_HotelIndustries">
+            <End Role="HotelIndustries" EntitySet="HotelIndustries" />
+            <End Role="MultipleHotelFacilities" EntitySet="MultipleHotelFacilities" />
           </AssociationSet>
           <AssociationSet Name="FK_Room_HotelIndustries" Association="Self.FK_Room_HotelIndustries">
             <End Role="HotelIndustries" EntitySet="HotelIndustries" />
@@ -968,6 +1073,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="HotelFacilities">
+            <EntityTypeMapping TypeName="HotelOrderModel.HotelFacility">
+              <MappingFragment StoreEntitySet="HotelFacilities">
+                <ScalarProperty Name="HotelFacilityID" ColumnName="HotelFacilityID" />
+                <ScalarProperty Name="HotelFacilityName" ColumnName="HotelFacilityName" />
+                <ScalarProperty Name="HotelFacilityImage" ColumnName="HotelFacilityImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HotelIndustries">
             <EntityTypeMapping TypeName="HotelOrderModel.HotelIndustry">
               <MappingFragment StoreEntitySet="HotelIndustries">
@@ -995,6 +1109,15 @@
                 <ScalarProperty Name="MultipleFacilitiesID" ColumnName="MultipleFacilitiesID" />
                 <ScalarProperty Name="RoomID" ColumnName="RoomID" />
                 <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MultipleHotelFacilities">
+            <EntityTypeMapping TypeName="HotelOrderModel.MultipleHotelFacility">
+              <MappingFragment StoreEntitySet="MultipleHotelFacilities">
+                <ScalarProperty Name="MultipleHotelFacilityID" ColumnName="MultipleHotelFacilityID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="HotelFacilityID" ColumnName="HotelFacilityID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

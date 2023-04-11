@@ -28,9 +28,11 @@ namespace OrderTest
         public virtual DbSet<Activity> Activities { get; set; }
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Facility> Facilities { get; set; }
+        public virtual DbSet<HotelFacility> HotelFacilities { get; set; }
         public virtual DbSet<HotelIndustry> HotelIndustries { get; set; }
         public virtual DbSet<HotelRegionName> HotelRegionNames { get; set; }
         public virtual DbSet<MultipleFacility> MultipleFacilities { get; set; }
+        public virtual DbSet<MultipleHotelFacility> MultipleHotelFacilities { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<OrderDetailStatu> OrderDetailStatus { get; set; }
         public virtual DbSet<Order> Orders { get; set; }

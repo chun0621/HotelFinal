@@ -17,6 +17,7 @@ namespace OrderTest
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HotelIndustry()
         {
+            this.MultipleHotelFacilities = new HashSet<MultipleHotelFacility>();
             this.Rooms = new HashSet<Room>();
         }
     
@@ -29,6 +30,8 @@ namespace OrderTest
         public string HotelImageDiscription { get; set; }
     
         public virtual HotelRegionName HotelRegionName { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MultipleHotelFacility> MultipleHotelFacilities { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }
     }
