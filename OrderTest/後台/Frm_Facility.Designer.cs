@@ -56,33 +56,34 @@
             this.btn_Delete_Facility = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBoxFacility = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.bindingSourceFacilities = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btn_Alter_HFacility = new System.Windows.Forms.Button();
-            this.btn_Delete_HFacility = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnHFacilityShow = new System.Windows.Forms.Button();
-            this.pictureBoxHFacility = new System.Windows.Forms.PictureBox();
-            this.btnBrowersHFacilityImage = new System.Windows.Forms.Button();
-            this.btn_Insert_HFacility = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxHotelFacilityName = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.comboBoxHotelSearch = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnHotelFacilitiesShow = new System.Windows.Forms.Button();
+            this.btnClearHFacilityImage = new System.Windows.Forms.Button();
             this.btn_Alter_HotelFacility = new System.Windows.Forms.Button();
             this.comboBoxHotelFacilityID = new System.Windows.Forms.ComboBox();
+            this.comboBoxHotelSearch = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.comboBoxHotelID = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnHotelFacilitiesShow = new System.Windows.Forms.Button();
             this.btn_Delete_HotelFacility = new System.Windows.Forms.Button();
+            this.btnBrowersHFacilityImage = new System.Windows.Forms.Button();
             this.btn_Insert_HotelFacility = new System.Windows.Forms.Button();
+            this.btnHFacilityShow = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btn_Alter_HFacility = new System.Windows.Forms.Button();
+            this.btn_Insert_HFacility = new System.Windows.Forms.Button();
+            this.pictureBoxHFacility = new System.Windows.Forms.PictureBox();
+            this.btn_Delete_HFacility = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxHotelFacilityName = new System.Windows.Forms.TextBox();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.btnClearHFacilityImage = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.bindingSourceFacilities = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -98,19 +99,19 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFacility)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFacilities)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHFacility)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHFacility)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFacilities)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -420,10 +421,6 @@
             this.pictureBoxFacility.TabIndex = 19;
             this.pictureBoxFacility.TabStop = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.splitContainer3);
@@ -434,102 +431,6 @@
             this.tabPage3.Text = "飯店設施";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btn_Alter_HFacility
-            // 
-            this.btn_Alter_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Alter_HFacility.Location = new System.Drawing.Point(433, 95);
-            this.btn_Alter_HFacility.Name = "btn_Alter_HFacility";
-            this.btn_Alter_HFacility.Size = new System.Drawing.Size(118, 23);
-            this.btn_Alter_HFacility.TabIndex = 34;
-            this.btn_Alter_HFacility.Text = "修改設施";
-            this.btn_Alter_HFacility.UseVisualStyleBackColor = true;
-            this.btn_Alter_HFacility.Click += new System.EventHandler(this.btn_Alter_HFacility_Click);
-            // 
-            // btn_Delete_HFacility
-            // 
-            this.btn_Delete_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Delete_HFacility.Location = new System.Drawing.Point(433, 124);
-            this.btn_Delete_HFacility.Name = "btn_Delete_HFacility";
-            this.btn_Delete_HFacility.Size = new System.Drawing.Size(118, 23);
-            this.btn_Delete_HFacility.TabIndex = 33;
-            this.btn_Delete_HFacility.Text = "刪除設施";
-            this.btn_Delete_HFacility.UseVisualStyleBackColor = true;
-            this.btn_Delete_HFacility.Click += new System.EventHandler(this.btn_Delete_HFacility_Click);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(565, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 12);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "飯店設施圖片";
-            // 
-            // btnHFacilityShow
-            // 
-            this.btnHFacilityShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHFacilityShow.Location = new System.Drawing.Point(433, 178);
-            this.btnHFacilityShow.Name = "btnHFacilityShow";
-            this.btnHFacilityShow.Size = new System.Drawing.Size(118, 23);
-            this.btnHFacilityShow.TabIndex = 32;
-            this.btnHFacilityShow.Text = "查看全部設施";
-            this.btnHFacilityShow.UseVisualStyleBackColor = true;
-            this.btnHFacilityShow.Click += new System.EventHandler(this.btnHFacilityShow_Click);
-            // 
-            // pictureBoxHFacility
-            // 
-            this.pictureBoxHFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxHFacility.BackColor = System.Drawing.Color.White;
-            this.pictureBoxHFacility.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxHFacility.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxHFacility.Location = new System.Drawing.Point(567, 27);
-            this.pictureBoxHFacility.Name = "pictureBoxHFacility";
-            this.pictureBoxHFacility.Size = new System.Drawing.Size(263, 203);
-            this.pictureBoxHFacility.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHFacility.TabIndex = 27;
-            this.pictureBoxHFacility.TabStop = false;
-            // 
-            // btnBrowersHFacilityImage
-            // 
-            this.btnBrowersHFacilityImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowersHFacilityImage.Location = new System.Drawing.Point(567, 236);
-            this.btnBrowersHFacilityImage.Name = "btnBrowersHFacilityImage";
-            this.btnBrowersHFacilityImage.Size = new System.Drawing.Size(108, 23);
-            this.btnBrowersHFacilityImage.TabIndex = 26;
-            this.btnBrowersHFacilityImage.Text = "瀏覽圖片";
-            this.btnBrowersHFacilityImage.UseVisualStyleBackColor = true;
-            this.btnBrowersHFacilityImage.Click += new System.EventHandler(this.btnBrowersHFacilityImage_Click);
-            // 
-            // btn_Insert_HFacility
-            // 
-            this.btn_Insert_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Insert_HFacility.Location = new System.Drawing.Point(433, 66);
-            this.btn_Insert_HFacility.Name = "btn_Insert_HFacility";
-            this.btn_Insert_HFacility.Size = new System.Drawing.Size(118, 23);
-            this.btn_Insert_HFacility.TabIndex = 30;
-            this.btn_Insert_HFacility.Text = "新增設施";
-            this.btn_Insert_HFacility.UseVisualStyleBackColor = true;
-            this.btn_Insert_HFacility.Click += new System.EventHandler(this.btn_Insert_HFacility_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(431, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 12);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "飯店設施名稱";
-            // 
-            // textBoxHotelFacilityName
-            // 
-            this.textBoxHotelFacilityName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxHotelFacilityName.Location = new System.Drawing.Point(433, 27);
-            this.textBoxHotelFacilityName.Name = "textBoxHotelFacilityName";
-            this.textBoxHotelFacilityName.Size = new System.Drawing.Size(112, 22);
-            this.textBoxHotelFacilityName.TabIndex = 28;
-            // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -539,6 +440,7 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.button1);
             this.splitContainer3.Panel1.Controls.Add(this.btnClearHFacilityImage);
             this.splitContainer3.Panel1.Controls.Add(this.btn_Alter_HotelFacility);
             this.splitContainer3.Panel1.Controls.Add(this.comboBoxHotelFacilityID);
@@ -567,53 +469,16 @@
             this.splitContainer3.SplitterDistance = 272;
             this.splitContainer3.TabIndex = 35;
             // 
-            // splitContainer4
+            // btnClearHFacilityImage
             // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.dataGridView3);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.dataGridView4);
-            this.splitContainer4.Size = new System.Drawing.Size(855, 268);
-            this.splitContainer4.SplitterDistance = 422;
-            this.splitContainer4.TabIndex = 36;
-            // 
-            // comboBoxHotelSearch
-            // 
-            this.comboBoxHotelSearch.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxHotelSearch.FormattingEnabled = true;
-            this.comboBoxHotelSearch.Location = new System.Drawing.Point(20, 37);
-            this.comboBoxHotelSearch.Name = "comboBoxHotelSearch";
-            this.comboBoxHotelSearch.Size = new System.Drawing.Size(221, 24);
-            this.comboBoxHotelSearch.TabIndex = 36;
-            this.comboBoxHotelSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxHotelSearch_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "飯店搜尋";
-            // 
-            // btnHotelFacilitiesShow
-            // 
-            this.btnHotelFacilitiesShow.Location = new System.Drawing.Point(20, 74);
-            this.btnHotelFacilitiesShow.Name = "btnHotelFacilitiesShow";
-            this.btnHotelFacilitiesShow.Size = new System.Drawing.Size(126, 23);
-            this.btnHotelFacilitiesShow.TabIndex = 37;
-            this.btnHotelFacilitiesShow.Text = "查看全部飯店設施";
-            this.btnHotelFacilitiesShow.UseVisualStyleBackColor = true;
-            this.btnHotelFacilitiesShow.Click += new System.EventHandler(this.btnHotelFacilitiesShow_Click);
+            this.btnClearHFacilityImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearHFacilityImage.Location = new System.Drawing.Point(722, 236);
+            this.btnClearHFacilityImage.Name = "btnClearHFacilityImage";
+            this.btnClearHFacilityImage.Size = new System.Drawing.Size(108, 23);
+            this.btnClearHFacilityImage.TabIndex = 38;
+            this.btnClearHFacilityImage.Text = "清除圖片";
+            this.btnClearHFacilityImage.UseVisualStyleBackColor = true;
+            this.btnClearHFacilityImage.Click += new System.EventHandler(this.btnClearHFacilityImage_Click);
             // 
             // btn_Alter_HotelFacility
             // 
@@ -633,6 +498,16 @@
             this.comboBoxHotelFacilityID.Size = new System.Drawing.Size(144, 20);
             this.comboBoxHotelFacilityID.TabIndex = 35;
             // 
+            // comboBoxHotelSearch
+            // 
+            this.comboBoxHotelSearch.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxHotelSearch.FormattingEnabled = true;
+            this.comboBoxHotelSearch.Location = new System.Drawing.Point(20, 37);
+            this.comboBoxHotelSearch.Name = "comboBoxHotelSearch";
+            this.comboBoxHotelSearch.Size = new System.Drawing.Size(221, 24);
+            this.comboBoxHotelSearch.TabIndex = 36;
+            this.comboBoxHotelSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxHotelSearch_SelectedIndexChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -641,6 +516,17 @@
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 34;
             this.label9.Text = "設施編號";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "飯店搜尋";
             // 
             // comboBoxHotelID
             // 
@@ -659,6 +545,16 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "飯店編號";
             // 
+            // btnHotelFacilitiesShow
+            // 
+            this.btnHotelFacilitiesShow.Location = new System.Drawing.Point(20, 74);
+            this.btnHotelFacilitiesShow.Name = "btnHotelFacilitiesShow";
+            this.btnHotelFacilitiesShow.Size = new System.Drawing.Size(126, 23);
+            this.btnHotelFacilitiesShow.TabIndex = 37;
+            this.btnHotelFacilitiesShow.Text = "查看全部飯店設施";
+            this.btnHotelFacilitiesShow.UseVisualStyleBackColor = true;
+            this.btnHotelFacilitiesShow.Click += new System.EventHandler(this.btnHotelFacilitiesShow_Click);
+            // 
             // btn_Delete_HotelFacility
             // 
             this.btn_Delete_HotelFacility.Location = new System.Drawing.Point(20, 226);
@@ -669,6 +565,17 @@
             this.btn_Delete_HotelFacility.UseVisualStyleBackColor = true;
             this.btn_Delete_HotelFacility.Click += new System.EventHandler(this.btn_Delete_HotelFacility_Click);
             // 
+            // btnBrowersHFacilityImage
+            // 
+            this.btnBrowersHFacilityImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowersHFacilityImage.Location = new System.Drawing.Point(567, 236);
+            this.btnBrowersHFacilityImage.Name = "btnBrowersHFacilityImage";
+            this.btnBrowersHFacilityImage.Size = new System.Drawing.Size(108, 23);
+            this.btnBrowersHFacilityImage.TabIndex = 26;
+            this.btnBrowersHFacilityImage.Text = "瀏覽圖片";
+            this.btnBrowersHFacilityImage.UseVisualStyleBackColor = true;
+            this.btnBrowersHFacilityImage.Click += new System.EventHandler(this.btnBrowersHFacilityImage_Click);
+            // 
             // btn_Insert_HotelFacility
             // 
             this.btn_Insert_HotelFacility.Location = new System.Drawing.Point(20, 170);
@@ -678,6 +585,108 @@
             this.btn_Insert_HotelFacility.Text = "新增飯店設施";
             this.btn_Insert_HotelFacility.UseVisualStyleBackColor = true;
             this.btn_Insert_HotelFacility.Click += new System.EventHandler(this.btn_Insert_HotelFacility_Click);
+            // 
+            // btnHFacilityShow
+            // 
+            this.btnHFacilityShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHFacilityShow.Location = new System.Drawing.Point(433, 178);
+            this.btnHFacilityShow.Name = "btnHFacilityShow";
+            this.btnHFacilityShow.Size = new System.Drawing.Size(118, 23);
+            this.btnHFacilityShow.TabIndex = 32;
+            this.btnHFacilityShow.Text = "查看全部設施";
+            this.btnHFacilityShow.UseVisualStyleBackColor = true;
+            this.btnHFacilityShow.Click += new System.EventHandler(this.btnHFacilityShow_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(565, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 12);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "飯店設施圖片";
+            // 
+            // btn_Alter_HFacility
+            // 
+            this.btn_Alter_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Alter_HFacility.Location = new System.Drawing.Point(433, 95);
+            this.btn_Alter_HFacility.Name = "btn_Alter_HFacility";
+            this.btn_Alter_HFacility.Size = new System.Drawing.Size(118, 23);
+            this.btn_Alter_HFacility.TabIndex = 34;
+            this.btn_Alter_HFacility.Text = "修改設施";
+            this.btn_Alter_HFacility.UseVisualStyleBackColor = true;
+            this.btn_Alter_HFacility.Click += new System.EventHandler(this.btn_Alter_HFacility_Click);
+            // 
+            // btn_Insert_HFacility
+            // 
+            this.btn_Insert_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Insert_HFacility.Location = new System.Drawing.Point(433, 66);
+            this.btn_Insert_HFacility.Name = "btn_Insert_HFacility";
+            this.btn_Insert_HFacility.Size = new System.Drawing.Size(118, 23);
+            this.btn_Insert_HFacility.TabIndex = 30;
+            this.btn_Insert_HFacility.Text = "新增設施";
+            this.btn_Insert_HFacility.UseVisualStyleBackColor = true;
+            this.btn_Insert_HFacility.Click += new System.EventHandler(this.btn_Insert_HFacility_Click);
+            // 
+            // pictureBoxHFacility
+            // 
+            this.pictureBoxHFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxHFacility.BackColor = System.Drawing.Color.White;
+            this.pictureBoxHFacility.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxHFacility.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxHFacility.Location = new System.Drawing.Point(567, 27);
+            this.pictureBoxHFacility.Name = "pictureBoxHFacility";
+            this.pictureBoxHFacility.Size = new System.Drawing.Size(263, 203);
+            this.pictureBoxHFacility.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHFacility.TabIndex = 27;
+            this.pictureBoxHFacility.TabStop = false;
+            // 
+            // btn_Delete_HFacility
+            // 
+            this.btn_Delete_HFacility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Delete_HFacility.Location = new System.Drawing.Point(433, 124);
+            this.btn_Delete_HFacility.Name = "btn_Delete_HFacility";
+            this.btn_Delete_HFacility.Size = new System.Drawing.Size(118, 23);
+            this.btn_Delete_HFacility.TabIndex = 33;
+            this.btn_Delete_HFacility.Text = "刪除設施";
+            this.btn_Delete_HFacility.UseVisualStyleBackColor = true;
+            this.btn_Delete_HFacility.Click += new System.EventHandler(this.btn_Delete_HFacility_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(431, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 12);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "飯店設施名稱";
+            // 
+            // textBoxHotelFacilityName
+            // 
+            this.textBoxHotelFacilityName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxHotelFacilityName.Location = new System.Drawing.Point(433, 27);
+            this.textBoxHotelFacilityName.Name = "textBoxHotelFacilityName";
+            this.textBoxHotelFacilityName.Size = new System.Drawing.Size(112, 22);
+            this.textBoxHotelFacilityName.TabIndex = 28;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.dataGridView3);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.dataGridView4);
+            this.splitContainer4.Size = new System.Drawing.Size(855, 268);
+            this.splitContainer4.SplitterDistance = 422;
+            this.splitContainer4.TabIndex = 36;
             // 
             // dataGridView3
             // 
@@ -701,16 +710,19 @@
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
-            // btnClearHFacilityImage
+            // openFileDialog1
             // 
-            this.btnClearHFacilityImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearHFacilityImage.Location = new System.Drawing.Point(722, 236);
-            this.btnClearHFacilityImage.Name = "btnClearHFacilityImage";
-            this.btnClearHFacilityImage.Size = new System.Drawing.Size(108, 23);
-            this.btnClearHFacilityImage.TabIndex = 38;
-            this.btnClearHFacilityImage.Text = "清除圖片";
-            this.btnClearHFacilityImage.UseVisualStyleBackColor = true;
-            this.btnClearHFacilityImage.Click += new System.EventHandler(this.btnClearHFacilityImage_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(269, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Frm_Facility
             // 
@@ -739,20 +751,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFacility)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFacilities)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHFacility)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHFacility)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFacilities)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -813,5 +825,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Button btnClearHFacilityImage;
+        private System.Windows.Forms.Button button1;
     }
 }
