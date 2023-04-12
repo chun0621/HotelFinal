@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F997537-E7E2-44B1-B4DA-F70C83B4FDBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrderTest</RootNamespace>
+    <AssemblyName>OrderTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comment.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelFacility.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelIndustry.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelRegionName.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleFacility.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleHotelFacility.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailStatu.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Room.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomAdmin.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClass.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomImage.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomMember.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomStyle.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomTimePrice.cs">
+      <DependentUpon>dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\AdminLogin.designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\FrmUserSelectRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\FrmUserSelectRoom.Designer.cs">
+      <DependentUpon>FrmUserSelectRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_About.Designer.cs">
+      <DependentUpon>Frm_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_HomePage.Designer.cs">
+      <DependentUpon>Frm_HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_UserCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_UserCenter.Designer.cs">
+      <DependentUpon>Frm_UserCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_UserOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_UserOrder.Designer.cs">
+      <DependentUpon>Frm_UserOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_UserModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_UserModify.designer.cs">
+      <DependentUpon>Frm_UserModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_MemberLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_MemberLogIn.designer.cs">
+      <DependentUpon>Frm_MemberLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\Frm_MemberIForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="使用者\Frm_MemberIForgetPassword.designer.cs">
+      <DependentUpon>Frm_MemberIForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="使用者\RoomUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="使用者\RoomUserControl.Designer.cs">
+      <DependentUpon>RoomUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Comments.designer.cs">
+      <DependentUpon>Frm_Comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_MemberModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_MemberModify.designer.cs">
+      <DependentUpon>Frm_MemberModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Activity.designer.cs">
+      <DependentUpon>Frm_Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Room.designer.cs">
+      <DependentUpon>Frm_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Order.designer.cs">
+      <DependentUpon>Frm_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Industry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Industry.designer.cs">
+      <DependentUpon>Frm_Industry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Payment.designer.cs">
+      <DependentUpon>Frm_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Management.Designer.cs">
+      <DependentUpon>Frm_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\Frm_Facility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_Facility.Designer.cs">
+      <DependentUpon>Frm_Facility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="後台\Frm_RoomPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\Frm_RoomPicture.designer.cs">
+      <DependentUpon>Frm_RoomPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\frm_test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\frm_test2.Designer.cs">
+      <DependentUpon>frm_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="使用者\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\FrmUserSelectRoom.resx">
+      <DependentUpon>FrmUserSelectRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_About.resx">
+      <DependentUpon>Frm_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_HomePage.resx">
+      <DependentUpon>Frm_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_UserCenter.resx">
+      <DependentUpon>Frm_UserCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_UserOrder.resx">
+      <DependentUpon>Frm_UserOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_UserModify.resx">
+      <DependentUpon>Frm_UserModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_MemberLogIn.resx">
+      <DependentUpon>Frm_MemberLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\Frm_MemberIForgetPassword.resx">
+      <DependentUpon>Frm_MemberIForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="使用者\RoomUserControl.resx">
+      <DependentUpon>RoomUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Comments.resx">
+      <DependentUpon>Frm_Comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_MemberModify.resx">
+      <DependentUpon>Frm_MemberModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Activity.resx">
+      <DependentUpon>Frm_Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Room.resx">
+      <DependentUpon>Frm_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Order.resx">
+      <DependentUpon>Frm_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Industry.resx">
+      <DependentUpon>Frm_Industry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Payment.resx">
+      <DependentUpon>Frm_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Management.resx">
+      <DependentUpon>Frm_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\Frm_Facility.resx">
+      <DependentUpon>Frm_Facility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="後台\Frm_RoomPicture.resx">
+      <DependentUpon>Frm_RoomPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="dbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbContext.edmx.diagram">
+      <DependentUpon>dbContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-271624.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomePage_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbContext.edmx</DependentUpon>
+      <LastGenOutput>dbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbContext.edmx</DependentUpon>
+      <LastGenOutput>dbContext.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\2530788_add user_business man_employee_general_human_icon.png" />
+    <None Include="Resources\2530821_business man_employee_general_human_member_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
