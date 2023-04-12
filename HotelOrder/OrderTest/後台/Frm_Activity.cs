@@ -17,7 +17,7 @@ namespace prjMidterm1
         public Frm_Activity()
         {
             InitializeComponent();
-            showYeaActivity();
+            //showYeaActivity();
         }
 
         HotelOrderEntities HotelOrder = new HotelOrderEntities();
